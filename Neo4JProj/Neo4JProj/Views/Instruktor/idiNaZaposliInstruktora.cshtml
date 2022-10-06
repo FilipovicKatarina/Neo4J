@@ -1,0 +1,28 @@
+﻿@model Neo4JProj.Models.Instruktor
+
+@{
+    ViewData["Title"] = "idiNaZaposliInstruktora";
+}
+
+<h1 style="background-color:forestgreen">Zaposli instruktora plesa</h1> 
+<br />
+<br /> 
+<div> 
+    <div>
+        <h4></h4>
+        <form action="dodajInstruktoraUSkolu" method="post"> 
+            <label style="background-color:lightgreen">Navedi ime plesne skole</label>
+            <input type="text" name="ime" placeholder="ime" /> 
+            <div>
+                <label style="background-color:lightgreen">Navedi id instruktora</label>
+                <input type="text" name="idInstruktora" placeholder="idInstruktora" />
+            </div> 
+            <div>
+                <br />
+                <input type="submit" value="Zaposli" />
+            </div>
+        </form>
+    </div> 
+</div>
+
+

@@ -1,0 +1,53 @@
+﻿@model Neo4JProj.Models.Instruktor
+
+@{
+    ViewData["Title"] = "idiNaobrisiInstruktorStranicu";
+}
+ 
+<div>
+    <h2 style="background-color:forestgreen;text-align:center">Instruktor plesa</h2>
+    <hr />
+    <br /> 
+    <div>
+        <button>
+            <a href="../Home/Index" class="this-page-style">Vrati se na početnu stranu</a>
+        </button>
+    </div> 
+    <br /> 
+    <div style="height:50%"> 
+        <form asp-action="ObrisiInstruktora">
+            <label style="background-color:lightgreen">Navedi id instruktora</label> 
+            <input type="text" name="Idinstruktora" placeholder="Idinstruktora" value="" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+    </div>
+    <h5 style="color:red">Da li ste sigurni da želite da obrišete?</h5>
+    <br />
+    <hr />
+    <br /> 
+    <h4>Promena biografije određenog instruktora plesa</h4>
+    <div style="height:50%">
+        <form action="PromeniInstruktora" method="post">
+            <label style="background-color:lightgreen">Navedi ime instruktora</label>
+            <input type="text" name="ime" placeholder="ime" /> 
+            <br />
+            <label style="background-color:lightgreen">Navedi prezime instruktora</label>
+            <input type="text" name="prezime" placeholder="prezime" /> 
+            <br /> 
+            <label style="background-color:lightgreen">Navedi novi biografiju instruktora</label>
+            <input type="text" name="biografijaNova" placeholder="biografijaNova" />
+            <br />
+            <br /> 
+            <input type="submit" value="Modifikuj" />
+        </form>
+    </div>
+    <hr />
+    <div>
+        <h4>Ukucaj ime instruktora čije plesove želiš videti</h4>
+        <form action="PronadjiPlesoveKojeDrzi" method="get">
+            <label style="background-color:lightgreen">Navedi ime instruktora</label>
+            <input type="text" name="ime" placeholder="ime" /> 
+            <input type="submit" value="Pronađi" />
+        </form>
+    </div> 
+</div>

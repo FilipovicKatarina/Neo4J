@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Neo4JProj.Models.PlesnaSkola>
+
+@{
+    ViewData["Title"] = "Preporuke";
+}
+
+<h1>Izdvoji smo za Vas najbolje ocenje skole</h1> 
+<br />
+<br /> 
+<table border="2" style="background-color:lightpink;text-align:center">
+    <thead>
+        <tr>
+            <th width="200">Skola ID</th>
+            <th width="200">Ime</th>
+            <th width="200">Grad</th>
+            <th width="200">Adresa</th>
+            <th width="200">Email</th>
+            <th width="200">Brj tel</th> 
+            <th width="200">Ocena</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Idskole</td>
+                <td>@item.Ime</td>
+                <td>@item.Grad</td>
+                <td>@item.Adresa</td>
+                <td>@item.Email</td>
+                <td>@item.Brojtel</td>
+                <td>@item.Ocena</td>  
+            </tr>
+        }
+    </tbody>
+</table>

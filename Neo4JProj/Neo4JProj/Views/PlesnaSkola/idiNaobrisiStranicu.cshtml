@@ -1,0 +1,55 @@
+﻿@model Neo4JProj.Models.PlesnaSkola
+
+@{
+    ViewData["Title"] = "idiNaobrisiStranicu";
+}
+ 
+<div> 
+    <h2 style="background-color:forestgreen;text-align:center">Plesna Skola</h2>
+    <hr />
+    <br /> 
+    <div>
+        <button>
+            <a href="../Home/Index" class="this-page-style">Vrati se na početnu stranu</a>
+        </button>
+    </div> 
+    <br /> 
+    <div style="height:50%">
+        <form asp-action="ObrisiPlesnuSkolu">
+            <label style="background-color:lightgreen">Navedi id plesne skole</label> 
+            <input type="text" name="Idskole" placeholder="Idskole" value="" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> | 
+        </form>
+    </div>
+    <h5 style="color:red">Da li ste sigurni da želite da obrišete?</h5>
+    <hr /> 
+    <h3>Promena imena plesne škole </h3>
+    <div style="height:50%">
+        <form action="PromeniPlesnuSkolu" method="post">
+            <label style="background-color:lightgreen">Navedi ime koje zelite da menjate</label>
+            <input type="text" name="staroIme" placeholder="staroIme" />
+            <br />
+            <br /> 
+            <label style="background-color:lightgreen">Navedi ime u zelite da promenite</label>
+            <input type="text" name="novoIme" placeholder="novoIme" />
+            <br />
+            <br />
+            <input type="submit" value="Modifikuj" />
+        </form>
+    </div> 
+    <hr /> 
+    <h3>Oceni skolu školu </h3>
+    <div style="height:50%">
+        <form action="OceniSkolu">
+            <label style="background-color:lightgreen">Navedi ime skole koju hocete da oceniti</label>
+            <input type="text" name="imeSkole" placeholder="imeSkole" />
+            <br />
+            <br /> 
+            <label style="background-color:lightgreen">Navedi ocenu od 0-10</label>
+            <input type="text" name="ocena" placeholder="ocena" />
+            <br />
+            <br />
+            <input type="submit" value="Oceni" />
+        </form>
+    </div> 
+</div>

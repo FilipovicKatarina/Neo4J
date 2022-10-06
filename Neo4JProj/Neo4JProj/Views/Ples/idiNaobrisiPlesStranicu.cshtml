@@ -1,0 +1,52 @@
+﻿@model Neo4JProj.Models.Ples
+
+@{
+    ViewData["Title"] = "idiNaobrisiPlesStranicu";
+}
+ 
+<div>
+    <h2 style="background-color:forestgreen;text-align:center">Ples</h2>
+    <hr /> 
+    <br /> 
+    <div>
+        <button>
+            <a href="../Home/Index" class="this-page-style">Vrati se na početnu stranu</a>
+        </button>
+    </div> 
+    <br />
+    <div style="height:50%">
+        <form asp-action="ObrisiPles">
+            <label style="background-color:lightgreen">Navedi id plesa</label> 
+            <input type="text" name="Idsplesa" placeholder="Idsplesa" value="" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+        </form>
+    </div>
+    <h5 style="color:red">Da li ste sigurni da želite da obrišete ples?</h5>
+    <hr />
+    <br />
+    <br />
+    <h3>Promena zemlje porekla određenog plesa</h3>
+    <div style="height:50%">
+        <form action="PromeniPles" method="post">
+            <label style="background-color:lightgreen">Navedi ime zemlje koje zelite da menjate</label>
+            <input type="text" name="staroIme" placeholder="staroIme" />
+            <br />
+            <br /> 
+            <label style="background-color:lightgreen">Navedi ime zemlje u zelite da promenite</label>
+            <input type="text" name="novoIme" placeholder="novoIme" />
+            <br />
+            <br /> 
+            <input type="submit" value="Modifikuj" />
+        </form>
+    </div>
+    <br />
+    <hr />
+    <div>
+        <h4>Ukucaj ime plesa ili neki deo da bi pronasao plesove cije ime sadrzi to</h4>
+        <form action="PretragaPlesaPoImenu" method="get">
+            <label style="background-color:lightgreen">Navedi ime plesa/deo imena</label>
+            <input type="text" name="ime" placeholder="ime" /> 
+            <input type="submit" value="Pronađi" />
+        </form>
+    </div>
+</div>

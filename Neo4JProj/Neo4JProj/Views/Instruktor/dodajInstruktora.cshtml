@@ -1,0 +1,65 @@
+﻿@model Neo4JProj.Models.Instruktor
+
+@{
+    ViewData["Title"] = "dodajInstruktora";
+}
+
+<h1 style="background-color:lightgreen">Dodaj instruktora</h1>
+<br />
+<div>
+    <button>
+        <a href="../Home/Index" class="this-page-style">Vrati se na početnu stranu</a>
+    </button>
+</div> 
+<br />
+<h4>Instruktor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="sacuvajInstruktoraUbazu" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Idinstruktora" class="control-label"></label>
+                <input asp-for="Idinstruktora" class="form-control" />
+                <span asp-validation-for="Idinstruktora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Starost" class="control-label"></label>
+                <input asp-for="Starost" class="form-control" />
+                <span asp-validation-for="Starost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pol" class="control-label"></label>
+                <input asp-for="Pol" class="form-control" />
+                <span asp-validation-for="Pol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Biografija" class="control-label"></label>
+                <input asp-for="Biografija" class="form-control" />
+                <span asp-validation-for="Biografija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Brojtel" class="control-label"></label>
+                <input asp-for="Brojtel" class="form-control" />
+                <span asp-validation-for="Brojtel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="DODAJ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+ 
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

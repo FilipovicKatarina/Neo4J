@@ -1,0 +1,28 @@
+﻿@model Neo4JProj.Models.PlesnaSkola
+
+@{
+    ViewData["Title"] = "idiNaDodavanjePlesa";
+}
+
+<h1 style="background-color:forestgreen">Dodavanje plesa u plesnu skolu</h1> 
+<br />
+<br /> 
+<div> 
+    <div>
+        <h4></h4>
+        <form action="dodajPlesSkoli" method="post"> 
+            <label style="background-color:lightgreen">Navedi ime plesne skole</label>
+            <input type="text" name="ime" placeholder="ime" /> 
+            <div>
+                <label style="background-color:lightgreen">Navedi id plesa</label>
+                <input type="text" name="idplesa" placeholder="idplesa" />
+            </div> 
+            <div>
+                <br />
+                <input type="submit" value="Dodaj" />
+            </div>
+        </form>
+    </div> 
+</div>
+
+

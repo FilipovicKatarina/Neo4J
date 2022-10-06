@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Neo4JProj.Models.Korisnik>
+
+@{
+    ViewData["Title"] = "PrikaziKorisnike";
+}
+
+<h1>Prikazi korisnike</h1> 
+<br />
+<br /> 
+<table border="2" style="background-color:lightpink;text-align:center">
+    <thead>
+        <tr>
+            <th width="200">Korisnik ID</th>
+            <th width="200">Ime</th>
+            <th width="200">Prezime</th>
+            <th width="200">Email</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Idkorisnika</td>
+                <td>@item.Ime</td>
+                <td>@item.Prezime</td> 
+                <td>@item.Email</td>    
+            </tr>
+        }
+    </tbody>
+</table>

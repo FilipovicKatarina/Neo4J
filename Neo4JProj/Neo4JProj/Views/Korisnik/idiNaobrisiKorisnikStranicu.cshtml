@@ -1,0 +1,55 @@
+﻿@model Neo4JProj.Models.Korisnik
+
+@{
+    ViewData["Title"] = "idiNaobrisiKorisnikStranicu";
+}
+
+<h2 style="background-color:forestgreen;text-align:center">Korisnik</h2> 
+<div>
+    <h4>Korisnik</h4>
+    <hr />
+    <br /> 
+    <div>
+        <button>
+            <a href="../Home/Index" class="this-page-style">Vrati se na početnu stranu</a>
+        </button>
+    </div> 
+    <br /> 
+    <div style="height:50%">
+        <form asp-action="ObrisiKorisnika">
+            <label style="background-color:lightgreen">Navedi id  korisnika</label> 
+            <input type="text" name="Idkorisnika" placeholder="Idkorisnika" value="" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+    </div>
+    <h5 style="color:red">Da li ste sigurni da želite da obrišete?</h5>
+    <hr />
+    <br />
+    <br /> 
+    <h4>Promena email-a izabranog korisnika</h4>
+    <div style="height:50%">
+        <form action="PromeniKorisnika" method="post">
+            <label style="background-color:lightgreen">Navedi ime korisnika</label>
+            <input type="text" name="ime" placeholder="ime" /> 
+            <br />
+            <label style="background-color:lightgreen">Navedi prezime korisnika</label>
+            <input type="text" name="prezime" placeholder="prezime" /> 
+            <br /> 
+            <label style="background-color:lightgreen">Navedi novi mejl korisnika</label>
+            <input type="text" name="noviMejl" placeholder="noviMejl" />
+            <br />
+            <br /> 
+            <input type="submit" value="Modifikuj" />
+        </form>
+    </div> 
+    <br />
+    <hr />
+    <div>
+        <h4>Ukucaj ime čije prijatelje želiš videti</h4>
+        <form action="PronadjiPrijatelje" method="get">
+            <label style="background-color:lightgreen">Navedi ime korisnika</label>
+            <input type="text" name="ime" placeholder="ime" /> 
+            <input type="submit" value="Pronađi" />
+        </form>
+    </div>
+</div>
